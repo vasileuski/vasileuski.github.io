@@ -120,8 +120,10 @@
                 total.render();
                 jQuery('.overlay').remove();
                 clearInterval(repeat);
-            } catch (e) {}
-        }, 1000);
+            } catch (e) {
+                console.log(e);
+            }
+        }, 2000);
     });
 
     function Amount(options) {
