@@ -48,252 +48,261 @@
     </style>
 </head>
 <body class="h-100">
-    <div class="overlay">
-        <div class="spinner">
-            <i class="fa fa-spin fa-spinner"></i>
-        </div>
+<div class="overlay">
+    <div class="spinner">
+        <i class="fa fa-spin fa-spinner"></i>
     </div>
-    <div class="container h-100">
-        <div class="content d-flex align-items-center h-100"></div>
-    </div>
+</div>
+<div class="container h-100">
+    <div class="content d-flex align-items-center h-100"></div>
+</div>
 
-    <script id="total-template" type="text/x-custom-template">
-        <table class="table table-dark">
-            <thead>
-                <tr>
-                    <th class="text-center"></th>
-                    <th class="text-right">—ÛÏÏ‡ (·ÂÎÍË)</th>
-                    <th class="text-right">ŒÊË‰‡ÂÏ‡ˇ ÒÛÏÏ‡ (Û.Â.)</th>
-                    <th class="text-right">‘‡ÍÚË˜ÂÒÍ‡ˇ ÒÛÏÏ‡ (Û.Â.)</th>
-                    <th class="text-right">›ÍÓÌÓÏËˇ</th>
-                </tr>
-            </thead>
-            <tbody>
-                [bills]
-                <tr>
-                    <th class="text-left">»ÚÓ„Ó</th>
-                    <td class="text-right"><span class="badge badge-success">[byn] BYN</span></td>
-                    <td class="text-right"><span class="badge badge-success">[exp] USD</span></td>
-                    <td class="text-right"><span class="badge badge-success">[usd] USD</span></td>
-                    <td class="text-right text-success"><span class="badge badge-success pulse">[profit] USD</span> <i class="fa fa-long-arrow-up"></i></td>
-                </tr>
-            </tbody>
-        </table>
-    </script>
-    <script id="bill-success-template" type="test/x-custom-template">
+<script id="total-template" type="text/x-custom-template">
+    <table class="table table-dark">
+        <thead>
         <tr>
-            <th class="text-left">œÀ¿“≈∆ #[index]<br/><span class="badge badge-info">[date]</span></th>
-            <td class="text-right align-middle"><span class="badge badge-success">[byn] BYN</span></td>
+            <th class="text-center"></th>
+            <th class="text-right">–°—É–º–º–∞ (–±–µ–ª–∫–∏)</th>
+            <th class="text-right">–û–∂–∏–¥–∞–µ–º–∞—è —Å—É–º–º–∞ (—É.–µ.)</th>
+            <th class="text-right">–§–∞–∫—Ç–∏—á–µ—Å–∫–∞—è —Å—É–º–º–∞ (—É.–µ.)</th>
+            <th class="text-right">–≠–∫–æ–Ω–æ–º–∏—è</th>
+        </tr>
+        </thead>
+        <tbody>
+        [bills]
+        <tr>
+            <th class="text-left">–ò—Ç–æ–≥–æ</th>
+            <td class="text-right"><span class="badge badge-success">[byn] BYN</span></td>
             <td class="text-right"><span class="badge badge-success">[exp] USD</span></td>
             <td class="text-right"><span class="badge badge-success">[usd] USD</span></td>
-            <td class="text-right text-success"><span class="badge badge-success">[profit] USD</span> <i class="fa fa-long-arrow-up"></i></td>
+            <td class="text-right text-success"><span class="badge badge-success pulse">[profit] USD</span> <i class="fa fa-long-arrow-up"></i></td>
         </tr>
-    </script>
-    <script id="bill-failure-template" type="test/x-custom-template">
-        <tr>
-            <th class="text-left">œÀ¿“≈∆ #[index]<br/><span class="badge badge-info">[date]</span></th>
-            <td class="text-right"><span class="badge badge-danger">[byn] BYN</span></td>
-            <td class="text-right"><span class="badge badge-danger">[exp] USD</span></td>
-            <td class="text-right"><span class="badge badge-danger">[usd] USD</span></td>
-            <td class="text-right text-danger"><span class="badge badge-danger">[profit] USD</span> <i class="fa fa-long-arrow-down"></i></td>
-        </tr>
-    </script>
-    <script id="bill-template" type="test/x-custom-template">
-        <tr>
-            <th class="text-left">œÀ¿“≈∆ #[index]<br/><span class="badge badge-info">[date]</span></th>
-            <td class="text-right"><span class="badge badge-secondary">[byn] BYN</span></td>
-            <td class="text-right"><span class="badge badge-secondary">[exp] USD</span></td>
-            <td class="text-right"><span class="badge badge-secondary">[usd] USD</span></td>
-            <td class="text-right"><span class="badge badge-secondary">[profit] USD</span> <i class="fa fa-exchange"></i></td>
-        </tr>
-    </script>
+        </tbody>
+    </table>
+</script>
+<script id="bill-success-template" type="test/x-custom-template">
+    <tr>
+        <th class="text-left">–ü–õ–ê–¢–ï–ñ #[index]<br/><span class="badge badge-info">[date]</span></th>
+        <td class="text-right align-middle"><span class="badge badge-success">[byn] BYN</span></td>
+        <td class="text-right"><span class="badge badge-success">[exp] USD</span></td>
+        <td class="text-right"><span class="badge badge-success">[usd] USD</span></td>
+        <td class="text-right text-success"><span class="badge badge-success">[profit] USD</span> <i class="fa fa-long-arrow-up"></i></td>
+    </tr>
+</script>
+<script id="bill-failure-template" type="test/x-custom-template">
+    <tr>
+        <th class="text-left">–ü–õ–ê–¢–ï–ñ #[index]<br/><span class="badge badge-info">[date]</span></th>
+        <td class="text-right"><span class="badge badge-danger">[byn] BYN</span></td>
+        <td class="text-right"><span class="badge badge-danger">[exp] USD</span></td>
+        <td class="text-right"><span class="badge badge-danger">[usd] USD</span></td>
+        <td class="text-right text-danger"><span class="badge badge-danger">[profit] USD</span> <i class="fa fa-long-arrow-down"></i></td>
+    </tr>
+</script>
+<script id="bill-template" type="test/x-custom-template">
+    <tr>
+        <th class="text-left">–ü–õ–ê–¢–ï–ñ #[index]<br/><span class="badge badge-info">[date]</span></th>
+        <td class="text-right"><span class="badge badge-secondary">[byn] BYN</span></td>
+        <td class="text-right"><span class="badge badge-secondary">[exp] USD</span></td>
+        <td class="text-right"><span class="badge badge-secondary">[usd] USD</span></td>
+        <td class="text-right"><span class="badge badge-secondary">[profit] USD</span> <i class="fa fa-exchange"></i></td>
+    </tr>
+</script>
 
-    <script type="text/javascript">
-        jQuery(document).ready(function() {
-            var total = new Total({
-                byn: 206095.00,
-                initial_date: '2017-10-28'
-            });
-
-            setTimeout(function() {
-                total.render();console.log('render');
-                jQuery('.overlay').remove();
-            }, 5000);
+<script type="text/javascript">
+    jQuery(document).ready(function() {
+        var total = new Total({
+            byn: 206095.00,
+            initial_date: '2017-10-28'
         });
 
-        function Amount(options) {
-            this.endpoint = 'http://www.nbrb.by/API/ExRates/Rates/USD?ParamMode=2&onDate=';
-            this.date = '';
-            this.byn = 0;
-            this.usd = 0;
+        var rendered = false;
 
-            this.init = function(options) {
-                this.date = options.date || this.now();
-                this.byn  = options.byn || 0;
-                this.usd  = this.calc();
-            };
-
-            this.now = function() {
-                var today = new Date();
-                return today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
-            };
-
-            this.calc = function() {
-                var _self = this;
-
-                jQuery.get(this.endpoint + this.date, function(response) {
-                    if (response && response.Cur_OfficialRate) {
-                        _self.usd = _self.byn / response.Cur_OfficialRate;
-                    }
-                });
-            };
-
-            this.init(options);
+        while (!rendered) {
+            try {
+                setTimeout(function() {
+                    total.render();
+                    jQuery('.overlay').remove();
+                    rendered = true;
+                }, 100);
+            } catch (e) {
+                rendered = false;
+            }
         }
+    });
 
-        function Bill(options) {
-            this.initial_date = '';
-            this.paid_at = '';
-            this.byn = 0;
-            this.amount = null;
-            this.expAmount = null;
+    function Amount(options) {
+        this.endpoint = 'https://www.nbrb.by/API/ExRates/Rates/USD?ParamMode=2&onDate=';
+        this.date = '';
+        this.byn = 0;
+        this.usd = 0;
 
-            this.init = function(options) {
-                this.initial_date = options.initial_date || '';
-                this.paid_at = options.paid_at || '';
-                this.byn = options.byn || 0;
+        this.init = function(options) {
+            this.date = options.date || this.now();
+            this.byn  = options.byn || 0;
+            this.usd  = this.calc();
+        };
 
-                if (this.paid_at) {
-                    this.amount = new Amount({
-                        date: options.paid_at,
-                        byn: options.byn
-                    });
+        this.now = function() {
+            var today = new Date();
+            return today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
+        };
+
+        this.calc = function() {
+            var _self = this;
+
+            jQuery.get(this.endpoint + this.date, function(response) {
+                if (response && response.Cur_OfficialRate) {
+                    _self.usd = _self.byn / response.Cur_OfficialRate;
+                }
+            });
+        };
+
+        this.init(options);
+    }
+
+    function Bill(options) {
+        this.initial_date = '';
+        this.paid_at = '';
+        this.byn = 0;
+        this.amount = null;
+        this.expAmount = null;
+
+        this.init = function(options) {
+            this.initial_date = options.initial_date || '';
+            this.paid_at = options.paid_at || '';
+            this.byn = options.byn || 0;
+
+            if (this.paid_at) {
+                this.amount = new Amount({
+                    date: options.paid_at,
+                    byn: options.byn
+                });
+            } else {
+                this.amount = new Amount({
+                    byn: options.byn
+                });
+            }
+
+            this.expAmount = new Amount({
+                date: options.initial_date,
+                byn: options.byn
+            });
+
+            this.amount.calc();
+            this.expAmount.calc();
+        };
+
+        this.init(options);
+    }
+
+    function Total (options) {
+        this.bills = [];
+        this.initial_date = '2017-10-28';
+        this.amount = null;
+        this.expAmount = null;
+
+        this.init = function (options) {
+            this.amount = new Amount({
+                byn: options.byn,
+                date: this.initial_date
+            });
+
+            this.expAmount = new Amount({
+                byn: options.byn
+            });
+
+            this.bills.push(
+                new Bill({
+                    byn: (options.byn * 30 / 100),
+                    paid_at: this.initial_date,
+                    initial_date: this.initial_date
+                })
+            );
+
+            this.bills.push(
+                new Bill({
+                    byn: (options.byn * 10 / 100),
+                    paid_at: '',
+                    initial_date: this.initial_date
+                })
+            );
+
+            this.bills.push(
+                new Bill({
+                    byn: (options.byn * 10 / 100),
+                    paid_at: '',
+                    initial_date: this.initial_date
+                })
+            );
+
+            this.bills.push(
+                new Bill({
+                    byn: (options.byn * 10 / 100),
+                    paid_at: '',
+                    initial_date: this.initial_date
+                })
+            );
+
+            this.bills.push(
+                new Bill({
+                    byn: (options.byn * 40 / 100),
+                    paid_at: '',
+                    initial_date: this.initial_date
+                })
+            );
+        };
+
+        this.render = function () {
+            jQuery('.content').html('');
+
+            var template = jQuery('#total-template').html();
+
+            var totalBYN = 0;
+            var totalEXP = 0;
+            var totalUSD = 0;
+            var totalDIFF = 0;
+
+            var billsTemplate = '';
+
+            this.bills.forEach(function (bill, index) {
+                var billTemplate = '';
+                var diff = bill.expAmount.usd - bill.amount.usd;
+
+                if (diff > 0) {
+                    billTemplate = jQuery('#bill-success-template').html();
+                } else if (diff === 0) {
+                    billTemplate = jQuery('#bill-template').html();
                 } else {
-                    this.amount = new Amount({
-                        byn: options.byn
-                    });
+                    billTemplate = jQuery('#bill-failure-template').html();
                 }
 
-                this.expAmount = new Amount({
-                    date: options.initial_date,
-                    byn: options.byn
-                });
+                billTemplate = billTemplate.replace('[index]', (index + 1).toString());
+                billTemplate = billTemplate.replace('[date]', (bill.paid_at ? bill.paid_at : 'N/A'));
+                billTemplate = billTemplate.replace('[byn]', bill.byn.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,"));
+                billTemplate = billTemplate.replace('[exp]', bill.expAmount.usd.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,"));
+                billTemplate = billTemplate.replace('[usd]', bill.amount.usd.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,"));
+                billTemplate = billTemplate.replace('[profit]', diff.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,"));
 
-                this.amount.calc();
-                this.expAmount.calc();
-            };
+                billsTemplate += billTemplate;
 
-            this.init(options);
-        }
+                totalBYN += bill.byn;
+                totalEXP += bill.expAmount.usd;
+                totalUSD += bill.amount.usd;
+                totalDIFF += diff;
+            });
 
-        function Total (options) {
-            this.bills = [];
-            this.initial_date = '2017-10-28';
-            this.amount = null;
-            this.expAmount = null;
+            template = template.replace('[bills]', billsTemplate);
 
-            this.init = function (options) {
-                this.amount = new Amount({
-                    byn: options.byn,
-                    date: this.initial_date
-                });
+            template = template.replace('[byn]', totalBYN.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,"));
+            template = template.replace('[exp]', totalEXP.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,"));
+            template = template.replace('[usd]', totalUSD.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,"));
+            template = template.replace('[profit]', totalDIFF.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,"));
 
-                this.expAmount = new Amount({
-                    byn: options.byn
-                });
+            jQuery('.content').append(template);
+        };
 
-                this.bills.push(
-                    new Bill({
-                        byn: (options.byn * 30 / 100),
-                        paid_at: this.initial_date,
-                        initial_date: this.initial_date
-                    })
-                );
-
-                this.bills.push(
-                    new Bill({
-                        byn: (options.byn * 10 / 100),
-                        paid_at: '',
-                        initial_date: this.initial_date
-                    })
-                );
-
-                this.bills.push(
-                    new Bill({
-                        byn: (options.byn * 10 / 100),
-                        paid_at: '',
-                        initial_date: this.initial_date
-                    })
-                );
-
-                this.bills.push(
-                    new Bill({
-                        byn: (options.byn * 10 / 100),
-                        paid_at: '',
-                        initial_date: this.initial_date
-                    })
-                );
-
-                this.bills.push(
-                    new Bill({
-                        byn: (options.byn * 40 / 100),
-                        paid_at: '',
-                        initial_date: this.initial_date
-                    })
-                );
-            };
-
-            this.render = function () {
-                jQuery('.content').html('');
-
-                var template = jQuery('#total-template').html();
-
-                var totalBYN = 0;
-                var totalEXP = 0;
-                var totalUSD = 0;
-                var totalDIFF = 0;
-
-                var billsTemplate = '';
-
-                this.bills.forEach(function (bill, index) {
-                    var billTemplate = '';
-                    var diff = bill.expAmount.usd - bill.amount.usd;
-
-                    if (diff > 0) {
-                        billTemplate = jQuery('#bill-success-template').html();
-                    } else if (diff === 0) {
-                        billTemplate = jQuery('#bill-template').html();
-                    } else {
-                        billTemplate = jQuery('#bill-failure-template').html();
-                    }
-
-                    billTemplate = billTemplate.replace('[index]', (index + 1).toString());
-                    billTemplate = billTemplate.replace('[date]', (bill.paid_at ? bill.paid_at : 'N/A'));
-                    billTemplate = billTemplate.replace('[byn]', bill.byn.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,"));
-                    billTemplate = billTemplate.replace('[exp]', bill.expAmount.usd.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,"));
-                    billTemplate = billTemplate.replace('[usd]', bill.amount.usd.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,"));
-                    billTemplate = billTemplate.replace('[profit]', diff.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,"));
-
-                    billsTemplate += billTemplate;
-
-                    totalBYN += bill.byn;
-                    totalEXP += bill.expAmount.usd;
-                    totalUSD += bill.amount.usd;
-                    totalDIFF += diff;
-                });
-
-                template = template.replace('[bills]', billsTemplate);
-
-                template = template.replace('[byn]', totalBYN.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,"));
-                template = template.replace('[exp]', totalEXP.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,"));
-                template = template.replace('[usd]', totalUSD.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,"));
-                template = template.replace('[profit]', totalDIFF.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,"));
-
-                jQuery('.content').append(template);
-            };
-
-            this.init(options);
-        }
-    </script>
+        this.init(options);
+    }
+</script>
 </body>
 </html>
