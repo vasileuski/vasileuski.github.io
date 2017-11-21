@@ -115,19 +115,13 @@
             initial_date: '2017-10-28'
         });
 
-        var rendered = false;
-
-        while (!rendered) {
+        var repeat = setInterval(function() {
             try {
-                setTimeout(function() {
-                    total.render();
-                    jQuery('.overlay').remove();
-                    rendered = true;
-                }, 100);
-            } catch (e) {
-                rendered = false;
-            }
-        }
+                total.render();
+                jQuery('.overlay').remove();
+                clearInterval(repeat);
+            } catch (e) {}
+        }, 1000);
     });
 
     function Amount(options) {
