@@ -264,9 +264,9 @@
                 var billTemplate = '';
                 var diff = bill.expAmount.usd - bill.amount.usd;
 
-                if (diff > 0) {
+                if (diff > 0 && !bill.paid_at) {
                     billTemplate = jQuery('#bill-success-template').html();
-                } else if (diff === 0) {
+                } else if (diff === 0 || bill.paid_at) {
                     billTemplate = jQuery('#bill-template').html();
                 } else {
                     billTemplate = jQuery('#bill-failure-template').html();
